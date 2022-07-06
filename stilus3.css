@@ -1,0 +1,606 @@
+
+.container {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  border: 4px solid #99feff;
+  background: radial-gradient(#b983ff, #3f87a6);
+  box-shadow: 10px 7px 5px #99feff, -10px -7px 5px #99feff,
+    3px -3px 15px #99feff, -3px -3px 5px #99feff;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_cards {
+  position: relative;
+  flex: 30%;
+}
+.tarjetas {
+  position: relative;
+  flex: 40%;
+}
+.importante {
+  position: relative;
+  flex: 20%;
+}
+.head {
+  position: absolute;
+  flex: 10%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border: none;
+  z-index: 4;
+}
+.head i {
+  font-size: 3rem;
+  color: rgba(231, 117, 117, 0.842);
+  transition: 0.5s;
+}
+.head i:hover {
+  color: rgb(238, 53, 229);
+}
+.head a {
+    position: relative;
+  text-decoration: none;
+  top: 2rem;
+  padding: 1rem 3rem;
+}
+
+/*--------OSI----------------------------------------*/
+.osi {
+  position: relative;
+  width: 150rem;
+  max-width: 100%;
+  height: calc(100vh - 40px);
+  background: linear-gradient(235deg, #94DAFF, #94B3FD, #99feff);
+  border: 4px solid #99feff;
+  display: flex;
+}
+
+.osi .osiLeft {
+  position: relative;
+  flex: 30%;
+  
+  border: 2px solid #99feff;
+  border-right: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.osi .osiRight {
+  position: relative;
+  flex: 70%;
+  border: 2px solid #99feff;
+  border-left: none;
+  overflow: hidden;
+}
+
+/*--------OSICubos---------------------*/
+
+ul {
+  position: relative;
+  top: 20%;
+  left: 6rem;
+  transform: skewY(15deg);
+}
+ul li {
+  position: relative;
+  list-style: none;
+  width: 120px;
+  background: #3e3f46;
+  padding: 15px;
+  transition: 0.5s;
+  z-index: calc(1 * var(--i));
+}
+ul li:hover {
+  transform: translateX(50px);
+  background: var(--clr);
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -40px;
+  width: 40px;
+  height: 100%;
+  background: #3e3f46;
+  filter: brightness(0.7);
+  transform-origin: left;
+  transform: skewY(-45deg);
+  transition: 0.5s;
+}
+
+ul li:hover::before {
+  background: var(--clr);
+  filter: brightness(0.7);
+}
+
+ul li::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #3e3f46;
+  filter: brightness(0.9);
+  transform-origin: bottom;
+  transform: skewX(-45deg);
+  transition: 0.5s;
+}
+ul li:hover::after {
+  background: var(--clr);
+  filter: brightness(0.9);
+}
+
+ul li a {
+  text-decoration: none;
+  color: #999;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+ul li:hover a {
+  color: #fff;
+}
+
+ul li:last-child::after {
+  box-shadow: 120px 120px 20px rgba(0, 0, 0, 0.25);
+}
+
+ul li span {
+  position: absolute;
+  top: 0;
+  right: -40px;
+  width: 40px;
+  height: 100%;
+  filter: brightness(0.7);
+  transform-origin: left;
+  transform: skewY(-45deg);
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  font-size: 1.25em;
+  color: yellow;
+}
+ul li:hover span {
+  opacity: 1;
+}
+
+/*----------------------------------Lado derecho osi----------------------------------------*/
+
+.capas {
+    position: relative;
+    width: 100%;
+    height: 72.5rem;
+    overflow: hidden;
+  }
+  .capas .capa_capa{
+    position: relative;
+    width: 90%;
+    height: 50rem;
+    padding: 50px;
+    overflow-y: auto;
+    text-align: justify;
+    font-size: 1.3rem;
+  }
+  .capa_capa h2{
+    position: relative;
+    font-size: 3rem;
+    color: aliceblue;
+    margin: 1px solid red;
+  }
+  .capa_capa .img_capa img{
+    position: absolute;
+    width: 15rem;
+    left: 50%;
+    top: 28%;
+  }
+
+  .capa_capa .img_capa.imgcap8 img{
+    position: absolute;
+    width: 15rem;
+    left: 40%;
+    top: 30%;
+  }
+  .capa_capa .img_capa.imgcap7 img{
+    position: absolute;
+    width: 15rem;
+    left: 60%;
+    top: 35%;
+  }
+  .capa_capa .img_capa.imgcap6 img{
+    position: absolute;
+    width: 10rem;
+    left: 40%;
+    top: 52%;
+  }
+
+  .capa_capa .img_capa.imgcap5 img{
+    position: absolute;
+    width: 15rem;
+    left: 50%;
+    top: 48%;
+  }
+  .capa_capa .img_capa.imgcap4 img{
+    position: absolute;
+    width: 15rem;
+    left: 60%;
+    top: 43%;
+  }
+  .capa_capa .img_capa.imgcap3 img{
+    position: absolute;
+    width: 15rem;
+    left: 62%;
+    top: 33%;
+  }
+
+  .capa_capa .img_capa.imgcap2 img{
+    position: absolute;
+    width: 15rem;
+    left: 55%;
+    top: 42%;
+  }
+
+  .capa_capa .img_capa.imgcap1 img{
+    position: absolute;
+    width: 15rem;
+    left: 78%;
+    top: 47%;
+  }
+/*-------------------------------Tarjetas--------------------------------*/
+.tarjetas {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin: 3rem;
+  grid-column-gap: 5%;
+  border-image-slice: 1;
+border-image-source: linear-gradient( 60deg, #ab29cf, #5ab6f0);
+  border-top: 10px ridge;
+  border-left: 10px ridge;
+  border-right: 10px groove;
+  border-bottom: 10px groove;
+  padding: 5rem;
+}
+.card {
+  width: 190px;
+  height: 254px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+  border-radius: 20px;
+  justify-content: center;
+  position: relative;
+  transition: all 0.4s;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.card::before {
+  content: "---contenido---";
+  letter-spacing: 0.2em;
+  position: absolute;
+  bottom: 8px;
+  left: 20px;
+  color: rgb(219, 218, 224);
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.card .card_info {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.4s;
+  background-color: rgb(103, 147, 230);
+}
+
+.card:hover .card_info {
+  transform: translateY(-30px);
+}
+.card2 {
+  width: 190px;
+  height: 254px;
+  border-radius: 20px;
+  background-color: #e9d2d2;
+  transition: all 0.2s;
+}
+.card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+.card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(223, 181, 204, 0.658);
+}
+
+.card i{
+  position: relative;
+  font-size: 3rem;
+  color: white;
+  top: 2rem;
+}
+.card .card_info h3{
+  position: relative;
+  font-size: 1.5rem;
+  top: 2rem;
+  color: white;
+}
+
+/*-----------------------------Segunda Tarjeta-------------------------------*/
+.oculto {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ /* background: rgba(134, 182, 221, 0.623);*/
+ background: linear-gradient(135deg, rgba(255,255,255, 0.1), rgba(255,255,255,0));
+ backdrop-filter: blur(10px);
+ --webkit--backdrop-filter: blur(10px);
+ --moz--backdrop-filter: blur(10px);
+ border: 1px solid rgba(255,255,255, 0.18);
+ box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: 100;
+}
+
+.open-modal {
+  position: fixed;
+  visibility: visible;
+  overflow-y: scroll;
+  z-index: 1000;
+}
+.modal-container h2{
+  color: white;
+  text-align: center;
+}
+.modal-container {
+  width: 90vw;
+  height: auto;
+  text-align: left;
+  display: grid;
+
+  background: rgba(173, 193, 236, 0.849);
+  position: relative;
+  font-size: 2rem;
+  color: rgb(3, 10, 3);
+}
+.modal-container ol li div{
+color: rgb(255, 251, 251);
+border: 1px solid white;
+background: black;
+width: 60%;
+
+}
+.modal-container ol li{
+  line-height: 3.5rem;
+}
+.cierre_btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+.cierre_btn:hover {
+  transform: scale(1.3);
+  color: red;
+}
+
+/*------------------------Tarjete desplegable-----------------*/
+.importante{
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card_impa{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 90%;
+  margin: 4rem;
+  background: #3f87a6;
+  border-bottom: 1rem ridge #296985;
+  border-right: 1rem ridge #296985;
+  border-left: 1rem groove #296985;
+  border-top: 1rem groove #296985;
+  box-shadow: inset 8px 8px 10px #70f570, inset -8px -8px 10px #70f570;
+}
+
+.cardd{
+  margin: 40px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cardd h1{
+  color: gray;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px yellow, -2px -2px 6px yellow;
+}
+.cardd .tab{
+  position: relative;
+  background: #fff;
+  padding: 0 20px 20px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.05);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.cardd .tab input{
+  appearance: none;
+}
+.cardd .tab label{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.cardd .tab label::after{
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 2.5em;
+  color: rgba(0,0,0,0.1);
+  transition: transform 1s;
+}
+.cardd .tab:hover label::after{
+  color: rgb(75, 209, 75);
+}
+.cardd .tab input:checked ~ label::after{
+  transform: rotate(135deg);
+}
+.cardd .tab label h2{
+  width: 80px;
+  height: 40px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.25em;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.cardd .tab input:checked ~ label h2{
+  position: absolute;
+  top: -7rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: rgba(255,255,255,0.2);
+  font-size: 8em;
+  justify-content: flex-end;
+  padding: 5px;
+}
+.cardd .tab:nth-child(2) label h2{
+  background: linear-gradient(135deg, #70f570, #49c628);
+
+}
+.cardd .tab:nth-child(3) label h2{
+  background: linear-gradient(135deg, #175ad8, #7c83e4);
+}
+.cardd .tab:nth-child(4) label h2{
+  background: linear-gradient(135deg, #802c05, #cc6918);
+}
+.cardd .tab:nth-child(5) label h2{
+  background: linear-gradient(135deg, #d182e9, #c62889);
+}
+.cardd .tab:nth-child(6) label h2{
+  background: linear-gradient(135deg, #25bdd1, #327ddf);
+}
+.cardd .tab:nth-child(7) label h2{
+  background: linear-gradient(135deg, #dbbd95, #dbeb4d);
+}
+.cardd .tab:nth-child(8) label h2{
+  background: linear-gradient(135deg, #d2e96f, #c64028);
+}
+.cardd .tab:nth-child(9) label h2{
+  background: linear-gradient(135deg, #06b114, #28c1c6);
+}
+.cardd .tab:nth-child(10) label h2{
+  background: linear-gradient(135deg, #a53829, #999b16);
+}
+.cardd .tab:nth-child(11) label h2{
+  background: linear-gradient(135deg, #e982d8, #e40a65);
+}
+.cardd .tab:nth-child(12) label h2{
+  background: linear-gradient(135deg, #3936df, #24dfb0);
+}
+.cardd .tab:nth-child(13) label h2{
+  background: linear-gradient(135deg, #88e0d9, #696066);
+}
+.cardd .tab:nth-child(14) label h2{
+  background: linear-gradient(135deg, #82e9a4, #2845c6);
+}
+.cardd .tab:nth-child(15) label h2{
+  background: linear-gradient(135deg, #b037d4, #910427);
+}
+.cardd .tab:nth-child(16) label h2{
+  background: linear-gradient(135deg, #292829, #868486);
+}
+.cardd .tab:nth-child(17) label h2{
+  background: linear-gradient(135deg, #bbd819, #966d30);
+}
+.cardd .tab:nth-child(18) label h2{
+  background: linear-gradient(135deg, #2c749e, #4d0ca1);
+}
+.cardd .tab:nth-child(19) label h2{
+  background: linear-gradient(135deg, #3a9927, #51f306);
+}
+.cardd .tab:nth-child(20) label h2{
+  background: linear-gradient(135deg, #f00707, #dd56b0);
+}
+.cardd .tab:nth-child(21) label h2{
+  background: linear-gradient(135deg, #69989e, #56f38a);
+}
+.cardd .tab:nth-child(22) label h2{
+  background: linear-gradient(135deg, #f1a808, #5fa00a);
+}
+.cardd .tab:nth-child(23) label h2{
+  background: linear-gradient(135deg, #e20ad7, #5526ad);
+}
+.cardd .tab:nth-child(24) label h2{
+  background: linear-gradient(135deg, #2add19, #43a376);
+}
+
+.cardd .tab:last-child{
+  margin-bottom: 2rem;
+}
+
+
+.cardd .tab label h3{
+  position: relative;
+  font-weight: 500;
+  color: #333;
+  z-index: 10;
+}
+.cardd .tab input:checked ~ label h3{
+  background: #fff;
+  padding: 2px 10px;
+  color: #333;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.cardd .tab .card_content{
+  max-height: 0;
+  transition: 1s;
+  overflow: hidden;
+}
+.cardd .tab input:checked ~ .card_content{
+  max-height: 100vh;
+}
+.cardd .tab .card_content p{
+  position: relative;
+  padding: 10px 0;
+  color: #333;
+  z-index: 10;
+}
+.cardd .tab input:checked ~ .card_content p{
+  color: #fff;
+}
+.cardd .tab .card_content a{
+  text-decoration: none;
+  color: rgb(234, 245, 234);
+  font-size: 1.5rem;
+}
+.cardd .tab .card_content a:hover{
+  color: rgb(53, 56, 238);
+  text-shadow: 2px 2px 4px white, -2px -2px 4px white;
+}

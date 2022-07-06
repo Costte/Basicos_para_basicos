@@ -1,0 +1,426 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 16px; /* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+      mejor provecho al rem en los font-size----*/
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(217deg, rgba(230, 64, 14, 0.8), rgba(255,0,0,0) 70.71%),
+              linear-gradient(127deg, rgba(3, 114, 81, 0.8), rgba(0,255,0,0) 70.71%),
+              linear-gradient(336deg, rgba(137, 6, 155, 0.8), rgba(0,0,255,0) 70.71%);
+}
+a {
+  text-decoration: none;
+}
+/*-----------head----------------------*/
+.head {
+  position: absolute;
+  flex: 10%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border: none;
+  z-index: 4;
+}
+.head i {
+  font-size: 3rem;
+  color: rgba(231, 117, 117, 0.842);
+  transition: 0.5s;
+}
+.head i:hover {
+  color: rgb(238, 53, 229);
+}
+.head a {
+    position: relative;
+  text-decoration: none;
+  top: 2rem;
+  padding: 1rem 3rem;
+}
+
+/*--------------------------------------copiar------------------*/
+.input_copy_wrapper{
+  background-color: rgba(0, 255, 255, 0.3);
+  border: .5px solid rgb(0, 255, 255);
+  border-radius: 10px;
+  width: 50%;
+  padding: 5px;
+  margin-bottom: 5rem;
+}
+.input_copy_wrapper .fa-copy{
+  position: absolute;
+  top: 1%;
+  left: 71%;
+  color: white;
+  cursor: pointer;
+}
+.input_copy_wrapper .icono7{
+  top: 0.5%;
+}
+.input_copy_wrapper .icono14{
+  top: 4%;
+}
+.input_copy_wrapper .icono26{
+  top: 0.5%;
+}
+
+input.clipboard{
+  border: none;
+  height: auto;
+  width: 100%;
+  background: transparent;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+input.clipboard:focus{
+  outline: none;
+}
+.msgs{
+  position: absolute;
+  left:37%;
+  color: white;
+  font-size: 2rem;
+  background-color: rgba(214, 154, 240, 0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: none;
+  z-index: 3;
+}
+/*-----------------CONTAINER-------------------------------*/
+.container {
+  position: relative;
+  width: 150rem;
+  max-width: 100%;
+  height: calc(100vh - 40px);
+  border: 4px solid salmon;
+  box-shadow: 10px 7px 5px #fff, -10px -7px 5px #fff,  3px -3px 15px #fff, -3px -3px 5px #fff;
+  display: flex;
+}
+
+.container .slideLeft {
+  position: relative;
+  flex: 30%;
+  background: #fff;
+  border-right: 3px solid salmon;
+  background: linear-gradient(#a480d3, #9198e5);
+}
+
+.container .slideRight {
+  position: relative;
+  flex: 70%;
+  background: #e5ddd5;
+  overflow: hidden;
+  border-left: 3px solid salmon;
+}
+
+/*-------------------------Lateral----------------------------------*/
+
+/*---------------------------------CENTROPRINICIPAL----------------------------*/
+
+/*----Chatbox-------------------*/
+.header_left {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  border-bottom: 3px solid salmon;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.header_left p{
+  position: relative;
+  font-weight: bold;
+  color: white;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header_right h2{
+  position: relative;
+  top: 10px;
+  left: 50px;
+}
+
+/*_-------------------------Comando---------------------*/
+
+.comandos_list {
+  position: relative;
+  height: calc(100% - 90px);
+  overflow: auto;
+  background: gray;
+  z-index: 0;
+}
+.bloques {
+  position: relative;
+  width: 98%;
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  background: #060c21;
+  cursor: pointer;
+  margin: 4px;
+}
+.bloques::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  bottom: -4px;
+  right: -4px;
+  background: linear-gradient(235deg, #ff00f2, #005cd4);
+  z-index: -1;
+}
+
+.bloques .cristal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  display: block;
+  background: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+}
+
+.bloques:hover {
+  border: 3px solid white;
+  background: rgba(255, 253, 253, 0.514);
+}
+
+.comandos_list .bloques .detalle .detalle_datos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+
+  transform: translateX(-0.75em);
+  transition: transform 200ms;
+}
+.comandos_list .bloques .detalle .detalle_datos h4 {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #fff;
+}
+.comandos_list .bloques .detalle .detalle_datos:hover h4{
+  color: black;
+}
+.comandos_list .bloques .detalle .detalle_datos::before {
+  content: "#";
+  display: inline-block;
+  width: 0.75em;
+  color: rgb(230, 21, 21);
+  opacity: 0;
+  transition: opacity 200ms;
+}
+.comandos_list .bloques .detalle .detalle_datos:hover {
+  transform: none;
+}
+.comandos_list .bloques .detalle .detalle_datos:hover::before {
+  opacity: 1;
+}
+.activo {
+  border: 3px solid Azure;
+  background: rgba(255, 253, 253, 0.514);
+  color: black;
+  z-index: 0;
+}
+
+/*--------------------------------------CHATBOX--------------------------------*/
+
+.chatss {
+  position: relative;
+  width: 100%;
+  height: 72.5rem;
+  overflow: hidden;
+}
+.chatss .chatbox {
+  background: url(./img/fondoo.jpg);
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: inherit;
+  padding: 50px;
+}
+
+
+.mensajes {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 5px 0;
+}
+.mensajes p {
+  position: relative;
+  text-align: left;
+  max-width: 100%;
+  padding: 12px;
+  background: #dcf8c6;
+  border: 3px dashed rgba(218, 79, 15, 0.884);
+  border-radius: 10px;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.mensajes .imgen_fondo img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px double rgba(204, 10, 117, 0.849);
+  width: 90rem;
+}
+.imgen_fondo {
+  margin: 0;
+  padding: 0;
+  width: 96rem;
+  height: 30rem;
+  background: #dcf8c6;
+ border-top: 8px ridge rgba(211, 133, 241, 0.849);
+ border-left: 8px ridge rgba(211, 133, 241, 0.849);
+ border-right: 8px groove rgba(211, 133, 241, 0.849);
+ border-bottom: 8px groove rgba(211, 133, 241, 0.849);
+  border-radius: 10px;
+}
+
+#chatbox5 .mensajes p{
+  max-width: 100%;
+}
+#chatbox5 .mensajes .imgen_fondo img{
+  height: 25rem;
+}
+#chatbox7 {
+  overflow-y: auto;
+}
+#chatbox7 .mensajes p{
+  max-width: 100%;
+}
+#chatbox7 .mensajes .imgen_fondo{
+  margin-bottom: 2rem;
+  height: 40rem;
+}
+#chatbox8 {
+  overflow-y: auto;
+}
+#chatbox8 .mensajes .imgen_fondo{
+  height: 45rem;
+}
+
+#chatbox10 {
+  overflow-y: auto;
+}
+#chatbox10 .mensajes .imgen_fondo{
+  height: 60rem;
+}
+#chatbox11 {
+  overflow-y: auto;
+}
+#chatbox11 .mensajes .imgen_fondo{
+  height: 60rem;
+}
+
+#chatbox15 {
+  overflow-y: auto;
+}
+#chatbox15 .mensajes .imgen_fondo{
+  height: 60rem;
+}
+#chatbox16 {
+  overflow-y: auto;
+}
+#chatbox16 .mensajes .imgen_fondo{
+  height: 50rem;
+}
+#chatbox17 {
+  overflow-y: auto;
+}
+#chatbox17 .mensajes .imgen_fondo{
+  height: 50rem;
+}
+#chatbox18 .mensajes .imgen_fondo{
+  height: 40rem;
+}
+#chatbox19 {
+  overflow-y: auto;
+}
+#chatbox19 .mensajes .imgen_fondo{
+  height: 40rem;
+}
+#chatbox20 {
+  overflow-y: auto;
+}
+#chatbox20 .mensajes .imgen_fondo{
+  height: 60rem;
+}
+#chatbox21 {
+  overflow-y: auto;
+}
+#chatbox21 .mensajes .imgen_fondo{
+  height: 40rem;
+}
+#chatbox22 {
+  overflow-y: auto;
+}
+#chatbox22 .mensajes .imgen_fondo{
+  height: 40rem;
+}
+#chatbox23 .mensajes p{
+  max-width: 100%;
+}
+#chatbox23 .mensajes .imgen_fondo{
+  height: 40rem;
+}
+#chatbox24 {
+  overflow-y: auto;
+}
+#chatbox24 .mensajes .imgen_fondo{
+  height: 68rem;
+}
+#chatbox25 {
+  overflow-y: auto;
+}
+#chatbox25 .mensajes .imgen_fondo{
+  height: 80rem;
+}
+
+#chatbox26 {
+  overflow-y: auto;
+}
+#chatbox26 .mensajes .imgen_fondo{
+  height: 55rem;
+}
+#chatbox26 .mensajes p{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#chatbox28 {
+  overflow-y: auto;
+}
+#chatbox28 .mensajes p{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#chatbox29 {
+  overflow-y: auto;
+}
+#chatbox29 .mensajes p{
+  max-width: 100%;
+}
+#chatbox29 .mensajes .imgen_fondo img{
+  height: 25rem;
+}
